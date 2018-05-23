@@ -1,3 +1,6 @@
+#!/usr/bin/env sh
+set -e
+
 docker container run \
     -d \
     -p 5432:5432 \
