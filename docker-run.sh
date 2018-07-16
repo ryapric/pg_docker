@@ -6,5 +6,5 @@ docker container run \
     -p 5432:5432 \
     -e POSTGRES_PASSWORD=postgres \
     -v pg_data:/var/lib/postgresql/data/ \
-    --name my-postgres \
+    --name pg \
     postgres
