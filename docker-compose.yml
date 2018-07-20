@@ -1,0 +1,36 @@
+version: "3"
+services:
+  db:
+    container_name: "pg"
+    image: "postgres:alpine"
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    networks:
+      - postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - pg_data:/var/lib/postgresql/data/
+    restart: "unless-stopped"
+  pgadmin:
+    container_name: "pgadmin"
+    image: dpage/pgadmin4:latest
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=test@gmail.com
+      - PGADMIN_DEFAULT_PASSWORD=postgres
+    networks:
+      - postgres
+    ports:
+      - "5050:80"
+    depends_on:
+      - "db"
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin
+    restart: "unless-stopped"
+networks:
+  postgres:
+    driver: "bridge"
+volumes:
+  pg_data:
+  pgadmin_data:
