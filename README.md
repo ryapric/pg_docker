@@ -1,12 +1,12 @@
 Dockerization Template for PostgreSQL Deployment via Docker Compose
 ===================================================================
 
-This Docker Compose YAML file allows for the deployment of two [Docker](https://www.docker.com/) containers: a [PostgreSQL](https://www.postgresql.org/) database instance, and a [pgAdmin](https://www.pgadmin.org/) instance for managing it. By design, Docker Compose files are easily extensible, and so this can be used as a template for your own project.
+This Docker Compose YAML file (`docker-compose.yml`) allows for the deployment of two [Docker](https://www.docker.com/) containers: a [PostgreSQL](https://www.postgresql.org/) database instance, and a [pgAdmin](https://www.pgadmin.org/) instance for managing it. By design, Docker Compose files are easily extensible, and so this can be used as a template for your own project.
 
 Prerequisites
 -------------
 
-- Docker
+1. Docker
     - Installation on Linux is straightforward:
 
     ```sh
@@ -15,7 +15,7 @@ Prerequisites
     $ sh docker-install.sh
     ```
 
-- Docker Compose ([less-straightforward installation](https://docs.docker.com/compose/install/))
+1. Docker Compose ([less-straightforward installation](https://docs.docker.com/compose/install/))
 
 How to use
 ----------
